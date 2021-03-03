@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>feedback</title>
+    <style>
+      .rating {
+        --transition-duration: 0.75s;
+        display: flex;
+        font-size: 2rem;
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      .rating__star {
+        position: relative;
+        padding: 5px;
+        filter: grayscale(100%);
+        opacity: 0.4;
+        transition: all var(--transition-duration);
+      }
+
+      
+      .rating__star:hover  {
+        opacity: 1;
+        transition: opacity var(--transition-duration);
+        cursor: pointer;
+        filter: grayscale(0%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="rating">
+      <div class="rating__star" title="order in DOM: 1">😍</div>
+      <div class="rating__star" title="order in DOM: 2">😉</div>
+      <div class="rating__star" title="order in DOM: 3">😊</div>
+      <div class="rating__star" title="order in DOM: 4">☹️</div>
+      <div class="rating__star" title="order in DOM: 5">😖</div>
+    </div>
+  </body>
+</html>
